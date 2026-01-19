@@ -12,9 +12,15 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(cors({
-  origin: 'http://localhost:5173',          // ← ប្តូរទៅ port ពិតប្រាកដរបស់ Vite/React អ្នក
-  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: [
+    'http://localhost:5173',                                 // local dev
+    'https://my-portfolio-uc9j-git-main-sengnoeun-slowmos-projects.vercel.app',  // ← domain ពិតរបស់អ្នក
+    'https://my-portfolio-uc9j.vercel.app',                  // preview / main domain
+    '*'                                                      // test បណ្តោះអាសន្ន (លុបក្រោយ)
+  ],
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 // Routes
 app.use('/api/projects', ProjectRoutes);
