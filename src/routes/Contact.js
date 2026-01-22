@@ -9,8 +9,7 @@ const {
   
 } = require('../controllers/ContactController');
 
-router
-  .route('/')
+router.route('/')
   .get(getAllContact)
   .post(createContact);
 

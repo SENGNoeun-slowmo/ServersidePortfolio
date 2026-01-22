@@ -1,23 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const {
-  getAllExperience,
-  getExperienceById,
-  createExperience,
-  updateExperience,
-  deleteExperience,
-  
-} = require('../controllers/ExsperiencesController');
+const ExperienceController = require('../controllers/ExsperiencesController');
 
-router
-  .route('/')
-  .get(getAllExperience)
-  .post(createExperience);
+// GET all experiences
+router.get('/', ExperienceController.getAll);
 
-router
-  .route('/:id')
-  .get(getExperienceById)
-  .patch(updateExperience)
-  .delete(deleteExperience);
+// GET one experience
+router.get('/:id', ExperienceController.getById);
+
+// CREATE experience
+router.post('/', ExperienceController.create);
+
+// UPDATE experience
+router.patch('/:id', ExperienceController.update);
+
+// DELETE experience
+router.delete('/:id', ExperienceController.delete);
 
 module.exports = router;

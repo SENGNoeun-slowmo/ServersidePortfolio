@@ -15,7 +15,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',                                 // local dev
     'https://my-portfolio-uc9j-git-main-sengnoeun-slowmos-projects.vercel.app',  // ← domain ពិតរបស់អ្នក
-    'https://my-portfolio-uc9j.vercel.app',                  // preview / main domain
+    'https://sengnoeun.vercel.app',                  // preview / main domain
     '*'                                                      // test បណ្តោះអាសន្ន (លុបក្រោយ)
   ],
   methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
