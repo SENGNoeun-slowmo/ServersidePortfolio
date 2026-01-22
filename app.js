@@ -1,9 +1,9 @@
 const express = require('express');
-const ProjectRoutes = require('./routes/Project');
-const ProfileRoutes = require('./routes/Profile');
-const SkillRoutes = require('./routes/Skill');
-const ExperienceRoutes = require('./routes/Experience');
-const ContactRoutes = require('./routes/Contact');
+const ProjectRoutes = require('./src/routes/Project');
+const ProfileRoutes = require('./src/routes/Profile');
+const SkillRoutes = require('./src/routes/Skill');
+const ExperienceRoutes = require('./src/routes/Experience');
+const ContactRoutes = require('./src/routes/Contact');
 const cors = require('cors');
 const app = express();
 
