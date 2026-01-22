@@ -4,8 +4,8 @@
   "description": "Express API with Supabase Auth",
   "main": "server.js",
   "scripts": {
-   "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
+   "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"No tests yet\" && exit 0"
   },
   "keywords": [
